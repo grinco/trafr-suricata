@@ -26,5 +26,17 @@ for src in /etc/suricata.dist/*; do
     fi
 done
 
-/app/trafr -s | /usr/bin/suricata -c /etc/suricata/suricata.yaml -r /dev/stdin -knone -vvv -l /var/log/suricata --runmode autofp 
+touch /var/log/suricata/fast.log
+ln -s /var/log/suricata/fast.log /app/fast.log
+
+touch /var/log/suricata/suricata.log
+ln -s /var/log/suricata/suricata.log /app/suricata.log
+
+touch /var/log/suricata/stats.log
+ln -s /var/log/suricata/stats.log /app/stats.log
+
+touch /var/log/suricata/eve.json
+ln -s /var/log/suricata/eve.json /app/eve.json
+
+/app/trafr -s | /usr/bin/suricata -c /etc/suricata/suricata.yaml -r /dev/stdin  
 
