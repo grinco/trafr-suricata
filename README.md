@@ -8,5 +8,5 @@ Implements Mikrotik Calea traffic inspection via via trafr.
 
 ```mkdir $HOME/suricata```
 
-```docker run -it --name suricata -v $HOME/suricata/etc:/etc/suricata  -v $HOME/suricata/logs:/var/log/suricata --network host --restart always grinco/trafr-suricata```
+```docker run -d --name suricata -v $HOME/suricata/etc:/etc/suricata  -v $HOME/suricata/logs:/var/log/suricata --network host --restart always grinco/trafr-suricata```
 
