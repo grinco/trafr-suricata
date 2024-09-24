@@ -4,7 +4,7 @@ Docker image of [suricata](https://suricata.io/)
 
 Implements Mikrotik Calea traffic inspection via via trafr.
 
-## INSTALL
+## RUNNING
 
 ```mkdir $HOME/suricata```
 
